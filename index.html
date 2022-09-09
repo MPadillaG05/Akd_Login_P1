@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+         
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+
+            <!--FORMULARIO DE LOGIN-->
+            <div class="form login">
+                <span class="title">Acceder</span>
+
+                <form id="formLogin" action="#">
+                    <div class="input-field">
+                        <input type="text" name="correo" placeholder="Correo electronico">
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="password" class="password" placeholder="Contraseña">
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Recuérdame</label>
+                        </div>
+                        
+                        <a href="#" class="text">¿Olvidaste la constraseña?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Acceder">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">No tienes una cuenta?
+                        <a href="#" class="text signup-link" onclick="changePageTitleR()">Registrate</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE REGISTRO -->
+            <div class="form signup">
+                <span class="title">Crear una cuenta</span>
+
+                <form id="formRegis" action="#" >
+                    <div class="input-field">
+                        <input id="name" type="text" name="nombre" placeholder="Nombres">
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input id="last-name" type="text" name="apellido" placeholder="Apellidos">
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input id="phone" type="text" name="telefono" placeholder="Teléfono">
+                        <i class="uil uil-phone"></i>
+                    </div>
+                    <div class="input-field">
+                        <input id="email" type="text" name="correo" placeholder="Correo electronico">
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input id="password" type="password" name="password" class="password" placeholder="Constraseña">
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input id="confirm-password" type="password" name="password2" class="password" placeholder="Confirmar contraseña">
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">Acepto todos los terminos y condiciones</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" value="Registrarse">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Ya tienes una cuenta?
+                        <a href="#" class="text login-link" onclick="changePageTitleI()">Inicia Sesión</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/validate.js"></script>
+    <script src="js/config.js"></script>
+    <!-- <script type="module" src="js/connectbd.js" ></script -->>
+    
+</body>
+</html>
